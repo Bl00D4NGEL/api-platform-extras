@@ -1,0 +1,19 @@
+{
+    "name": "dominik-peters/api-platform-extras",
+    "description": "Wrapper classes for API Platform",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "DominikPeters\\ApiPlatformExtras\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dominik Peters",
+            "email": "github@d-peters.com"
+        }
+    ],
+    "require": {
+        "api-platform/core": "^2.7 || ^3.0"
+    }
+}
