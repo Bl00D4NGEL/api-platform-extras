@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Shared\Infrastructure\ApiPlatform\Exception;
+namespace DominikPeters\ApiPlatformExtras\Exception;
 
 use Exception;
 

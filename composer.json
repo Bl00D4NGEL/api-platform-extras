@@ -4,7 +4,8 @@
     "type": "library",
     "autoload": {
         "psr-4": {
-            "DominikPeters\\ApiPlatformExtras\\": "src/"
+            "DominikPeters\\ApiPlatformExtras\\": "src/",
+            "ApiPlatformExtras\\Tests\\": "tests/"
         }
     },
     "authors": [
@@ -15,5 +16,8 @@
     ],
     "require": {
         "api-platform/core": "^2.7 || ^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10"
     }
 }

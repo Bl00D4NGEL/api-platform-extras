@@ -10,8 +10,8 @@ use ApiPlatform\Metadata\Patch;
 use ApiPlatform\Metadata\Post;
 use ApiPlatform\Metadata\Put;
 use ApiPlatform\State\ProcessorInterface;
-use App\Shared\Infrastructure\ApiPlatform\Exception\OperationNotImplementedException;
-use App\Shared\Infrastructure\ApiPlatform\Exception\ResourceNotSupportedException;
+use DominikPeters\ApiPlatformExtras\Exception\OperationNotImplementedException;
+use DominikPeters\ApiPlatformExtras\Exception\ResourceNotSupportedException;
 
 /**
  * @template T of object
