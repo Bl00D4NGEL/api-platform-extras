@@ -1,19 +1,23 @@
 {
-    "name": "dominik-peters/api-platform-extras",
+    "name": "cura/api-platform-extras",
     "description": "Wrapper classes for API Platform",
     "type": "library",
     "license": "MIT",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "autoload": {
         "psr-4": {
-            "DominikPeters\\ApiPlatformExtras\\": "src/",
+            "Cura\\ApiPlatformExtras\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
             "ApiPlatformExtras\\Tests\\": "tests/"
         }
     },
     "authors": [
         {
             "name": "Dominik Peters",
-            "email": "github@d-peters.com"
+            "email": "dominik.peters@cura4you.de"
         }
     ],
     "require": {
