@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace DominikPeters\ApiPlatformExtras\Exception;
+namespace Cura\ApiPlatformExtras\Exception;
 
 use Exception;
 

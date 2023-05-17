@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace DominikPeters\ApiPlatformExtras;
+namespace Cura\ApiPlatformExtras;
 
 use ApiPlatform\Metadata\GetCollection;
 use ApiPlatform\Metadata\Operation;
@@ -23,7 +23,7 @@ abstract class AbstractProvider implements ProviderInterface
      */
     final public function provide(Operation $operation, array $uriVariables = [], array $context = []): object|array|null
     {
-        if ($this->canProvideCollection($operation, $uriVariables, $context)) {
+        if ($this->shouldProvideCollection($operation, $uriVariables, $context)) {
             return $this->provideCollection($uriVariables, $context);
         }
 
@@ -31,13 +31,13 @@ abstract class AbstractProvider implements ProviderInterface
     }
 
     /**
-     * Check whether the provider can provide a collection for the given input.
+     * Check whether the provider should provide a collection for the given input.
      * This function can be overwritten to create custom logic as to when to return a collection or just a single item.
      *
      * @param array<string, mixed> $uriVariables
      * @param array<string, mixed> $context
      */
-    protected function canProvideCollection(Operation $operation, array $uriVariables, array $context): bool
+    protected function shouldProvideCollection(Operation $operation, array $uriVariables, array $context): bool
     {
         return $operation instanceof GetCollection;
     }

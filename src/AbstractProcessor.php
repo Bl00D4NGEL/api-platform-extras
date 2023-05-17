@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace DominikPeters\ApiPlatformExtras;
+namespace Cura\ApiPlatformExtras;
 
 use ApiPlatform\Metadata\Delete;
 use ApiPlatform\Metadata\Operation;
@@ -10,8 +10,8 @@ use ApiPlatform\Metadata\Patch;
 use ApiPlatform\Metadata\Post;
 use ApiPlatform\Metadata\Put;
 use ApiPlatform\State\ProcessorInterface;
-use DominikPeters\ApiPlatformExtras\Exception\OperationNotImplementedException;
-use DominikPeters\ApiPlatformExtras\Exception\ResourceNotSupportedException;
+use Cura\ApiPlatformExtras\Exception\OperationNotImplementedException;
+use Cura\ApiPlatformExtras\Exception\ResourceNotSupportedException;
 
 /**
  * @template T of object
