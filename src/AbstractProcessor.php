@@ -27,7 +27,7 @@ abstract class AbstractProcessor implements ProcessorInterface
      * @param array<string, mixed> $uriVariables
      * @param array<string, mixed> $context
      *
-     * @return ($operation is Delete ? null : T)
+     * @return ($operation is Delete ? null : ($operation is Post ? T|null : T))
      *
      * @throws ResourceNotSupportedException
      * @throws OperationNotImplementedException
@@ -37,7 +37,7 @@ abstract class AbstractProcessor implements ProcessorInterface
         Operation $operation,
         array $uriVariables = [],
         array $context = []
-    ): ?object {
+    ) {
         if (!$this->supportsResource($data, $uriVariables, $context)) {
             throw new ResourceNotSupportedException($data);
         }
@@ -74,7 +74,7 @@ abstract class AbstractProcessor implements ProcessorInterface
      * @param array<string, mixed> $uriVariables
      * @param array<string, mixed> $context
      *
-     * @return T
+     * @return ?T
      *
      * @throws OperationNotImplementedException
      */
@@ -83,7 +83,7 @@ abstract class AbstractProcessor implements ProcessorInterface
         Post $operation,
         array $uriVariables,
         array $context
-    ): ?object {
+    ) {
         throw new OperationNotImplementedException($operation);
     }
 
