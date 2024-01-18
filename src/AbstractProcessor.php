@@ -83,7 +83,7 @@ abstract class AbstractProcessor implements ProcessorInterface
         Post $operation,
         array $uriVariables,
         array $context
-    ): object {
+    ): ?object {
         throw new OperationNotImplementedException($operation);
     }
 
